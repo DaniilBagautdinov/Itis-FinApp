@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B42690F03F004842DE /* MainScreenViewController.swift */; };
+		9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */; };
 		A54F39A22690748A008B3476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F39A12690748A008B3476 /* AppDelegate.swift */; };
 		A54F39A42690748A008B3476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F39A32690748A008B3476 /* SceneDelegate.swift */; };
 		A54F39A62690748A008B3476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F39A52690748A008B3476 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9203B7B42690F03F004842DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAddViewController.swift; sourceTree = "<group>"; };
 		A54F399E2690748A008B3476 /* Itis-FinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Itis-FinApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54F39A12690748A008B3476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54F39A32690748A008B3476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				A54F39B9269078C2008B3476 /* MainScreen.storyboard */,
+				9203B7B42690F03F004842DE /* MainScreenViewController.swift */,
+				9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -174,6 +180,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54F39A62690748A008B3476 /* ViewController.swift in Sources */,
+				9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */,
+				9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */,
 				A54F39A22690748A008B3476 /* AppDelegate.swift in Sources */,
 				A54F39A42690748A008B3476 /* SceneDelegate.swift in Sources */,
 			);
