@@ -13,6 +13,9 @@
 		A54F39A92690748A008B3476 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39A72690748A008B3476 /* Main.storyboard */; };
 		A54F39AB2690748B008B3476 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A54F39AA2690748B008B3476 /* Assets.xcassets */; };
 		A54F39AE2690748B008B3476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39AC2690748B008B3476 /* LaunchScreen.storyboard */; };
+		A54F39B72690760C008B3476 /* Textbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39B62690760C008B3476 /* Textbook.storyboard */; };
+		A54F39BA269078C2008B3476 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39B9269078C2008B3476 /* MainScreen.storyboard */; };
+		A54F39BD26908978008B3476 /* Diagrams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39BC26908978008B3476 /* Diagrams.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A54F39AA2690748B008B3476 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A54F39AD2690748B008B3476 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A54F39AF2690748B008B3476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A54F39B62690760C008B3476 /* Textbook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Textbook.storyboard; sourceTree = "<group>"; };
+		A54F39B9269078C2008B3476 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
+		A54F39BC26908978008B3476 /* Diagrams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diagrams.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,9 @@
 		A54F39A02690748A008B3476 /* Itis-FinApp */ = {
 			isa = PBXGroup;
 			children = (
+				A54F39BB26908957008B3476 /* Diagrams */,
+				A54F39B8269078AF008B3476 /* MainScreen */,
+				A54F39B526907543008B3476 /* Textbook */,
 				A54F39A12690748A008B3476 /* AppDelegate.swift */,
 				A54F39A32690748A008B3476 /* SceneDelegate.swift */,
 				A54F39A52690748A008B3476 /* ViewController.swift */,
@@ -65,6 +74,30 @@
 				A54F39AF2690748B008B3476 /* Info.plist */,
 			);
 			path = "Itis-FinApp";
+			sourceTree = "<group>";
+		};
+		A54F39B526907543008B3476 /* Textbook */ = {
+			isa = PBXGroup;
+			children = (
+				A54F39B62690760C008B3476 /* Textbook.storyboard */,
+			);
+			path = Textbook;
+			sourceTree = "<group>";
+		};
+		A54F39B8269078AF008B3476 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A54F39B9269078C2008B3476 /* MainScreen.storyboard */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		A54F39BB26908957008B3476 /* Diagrams */ = {
+			isa = PBXGroup;
+			children = (
+				A54F39BC26908978008B3476 /* Diagrams.storyboard */,
+			);
+			path = Diagrams;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +158,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54F39AE2690748B008B3476 /* LaunchScreen.storyboard in Resources */,
+				A54F39BA269078C2008B3476 /* MainScreen.storyboard in Resources */,
 				A54F39AB2690748B008B3476 /* Assets.xcassets in Resources */,
+				A54F39B72690760C008B3476 /* Textbook.storyboard in Resources */,
 				A54F39A92690748A008B3476 /* Main.storyboard in Resources */,
+				A54F39BD26908978008B3476 /* Diagrams.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +324,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Itis-FinApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ITIS.Itis-FinApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Itis-FinApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,7 +351,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ITIS.Itis-FinApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
