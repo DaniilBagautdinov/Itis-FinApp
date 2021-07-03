@@ -41,7 +41,7 @@
         <scene sceneID="G6a-v5-l4g">
             <objects>
                 <viewControllerPlaceholder storyboardName="Diagrams" id="zWc-eG-xlG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Диаграммы" id="OYb-7Q-9NO"/>
+                    <tabBarItem key="tabBarItem" title="Категории" id="OYb-7Q-9NO"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgi-oG-Iz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

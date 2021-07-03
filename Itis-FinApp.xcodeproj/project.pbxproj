@@ -15,7 +15,7 @@
 		A54F39AE2690748B008B3476 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39AC2690748B008B3476 /* LaunchScreen.storyboard */; };
 		A54F39B72690760C008B3476 /* Textbook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39B62690760C008B3476 /* Textbook.storyboard */; };
 		A54F39BA269078C2008B3476 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39B9269078C2008B3476 /* MainScreen.storyboard */; };
-		A54F39BD26908978008B3476 /* Diagrams.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39BC26908978008B3476 /* Diagrams.storyboard */; };
+		A54F39BD26908978008B3476 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39BC26908978008B3476 /* Categories.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		A54F39AF2690748B008B3476 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A54F39B62690760C008B3476 /* Textbook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Textbook.storyboard; sourceTree = "<group>"; };
 		A54F39B9269078C2008B3476 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
-		A54F39BC26908978008B3476 /* Diagrams.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diagrams.storyboard; sourceTree = "<group>"; };
+		A54F39BC26908978008B3476 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		A54F39A02690748A008B3476 /* Itis-FinApp */ = {
 			isa = PBXGroup;
 			children = (
-				A54F39BB26908957008B3476 /* Diagrams */,
+				A54F39BB26908957008B3476 /* Categories */,
 				A54F39B8269078AF008B3476 /* MainScreen */,
 				A54F39B526907543008B3476 /* Textbook */,
 				A54F39A12690748A008B3476 /* AppDelegate.swift */,
@@ -92,12 +92,12 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
-		A54F39BB26908957008B3476 /* Diagrams */ = {
+		A54F39BB26908957008B3476 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				A54F39BC26908978008B3476 /* Diagrams.storyboard */,
+				A54F39BC26908978008B3476 /* Categories.storyboard */,
 			);
-			path = Diagrams;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +162,7 @@
 				A54F39AB2690748B008B3476 /* Assets.xcassets in Resources */,
 				A54F39B72690760C008B3476 /* Textbook.storyboard in Resources */,
 				A54F39A92690748A008B3476 /* Main.storyboard in Resources */,
-				A54F39BD26908978008B3476 /* Diagrams.storyboard in Resources */,
+				A54F39BD26908978008B3476 /* Categories.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
