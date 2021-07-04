@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "Facebook-Ð¿ÑÐ±Ð»Ð¸ÐºÐ°ÑÐ¸Ñ 50x50  Ð¿Ð¸ÐºÑ - ÐÐ¾Ð»ÑÐ·Ð¾Ð²Ð°ÑÐµÐ»ÑÑÐºÐ¸Ðµ ÑÐ°Ð·Ð¼ÐµÑÑ.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
