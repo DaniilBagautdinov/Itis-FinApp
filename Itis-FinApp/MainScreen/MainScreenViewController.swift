@@ -12,9 +12,11 @@ class MainScreenViewController: UIViewController {
     @IBOutlet weak var allMoneyLabel: UILabel!
     
     let defaults = UserDefaults.standard
+    var countOfExpenses: Int = 0
 
+    @IBOutlet weak var spendingHistoryTableView: UITableView!
     @IBAction func addFinButtonAction(_ sender: Any) {
-        allMoneyLabel.text = String(defaults.float(forKey: "allMoney"))
+        
 
         
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "MainScreenAddViewController") as? MainScreenAddViewController else { return }
@@ -22,11 +24,30 @@ class MainScreenViewController: UIViewController {
         present(controller, animated: true)
         
         defaults.set(defaults.float(forKey: "allMoney") + 1000, forKey: "allMoney")
+        allMoneyLabel.text = String(defaults.float(forKey: "allMoney"))
+        countOfExpenses+=1
+        spendingHistoryTableView.reloadData()
+        
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         defaults.set(0, forKey: "allMoney")
+        allMoneyLabel.text = String(defaults.float(forKey: "allMoney"))
+        spendingHistoryTableView.dataSource = self
+    }
+}
+
+extension MainScreenViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(countOfExpenses)
+        return countOfExpenses
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpendingHistoryTableViewCell", for: indexPath) as? SpendingHistoryTableViewCell else { return UITableViewCell() }
+        cell.setData(expense: "+1000")
+        return cell
     }
 }
