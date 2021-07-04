@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B42690F03F004842DE /* MainScreenViewController.swift */; };
 		9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */; };
+		A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB72691DF5E000133B3 /* TextbookViewController.swift */; };
+		A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */; };
+		A5393AC02691E4C2000133B3 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5393ABF2691E4C2000133B3 /* text.txt */; };
+		A5393AC2269223C4000133B3 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AC1269223C4000133B3 /* ArticleViewController.swift */; };
 		A54F39A22690748A008B3476 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F39A12690748A008B3476 /* AppDelegate.swift */; };
 		A54F39A42690748A008B3476 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F39A32690748A008B3476 /* SceneDelegate.swift */; };
 		A54F39A62690748A008B3476 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54F39A52690748A008B3476 /* ViewController.swift */; };
@@ -24,6 +28,10 @@
 /* Begin PBXFileReference section */
 		9203B7B42690F03F004842DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAddViewController.swift; sourceTree = "<group>"; };
+		A5393AB72691DF5E000133B3 /* TextbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookViewController.swift; sourceTree = "<group>"; };
+		A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookTableViewCell.swift; sourceTree = "<group>"; };
+		A5393ABF2691E4C2000133B3 /* text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
+		A5393AC1269223C4000133B3 /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		A54F399E2690748A008B3476 /* Itis-FinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Itis-FinApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54F39A12690748A008B3476 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A54F39A32690748A008B3476 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				A54F39B62690760C008B3476 /* Textbook.storyboard */,
+				A5393AC1269223C4000133B3 /* ArticleViewController.swift */,
+				A5393AB72691DF5E000133B3 /* TextbookViewController.swift */,
+				A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */,
+				A5393ABF2691E4C2000133B3 /* text.txt */,
 			);
 			path = Textbook;
 			sourceTree = "<group>";
@@ -166,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5393AC02691E4C2000133B3 /* text.txt in Resources */,
 				A54F39AE2690748B008B3476 /* LaunchScreen.storyboard in Resources */,
 				A54F39BA269078C2008B3476 /* MainScreen.storyboard in Resources */,
 				A54F39AB2690748B008B3476 /* Assets.xcassets in Resources */,
@@ -183,7 +196,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54F39A62690748A008B3476 /* ViewController.swift in Sources */,
+				A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */,
+				A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */,
 				9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */,
+				A5393AC2269223C4000133B3 /* ArticleViewController.swift in Sources */,
 				9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */,
 				A54F39A22690748A008B3476 /* AppDelegate.swift in Sources */,
 				EB295BA52691BF6900EFF606 /* SpendingHistoryTableViewCell.swift in Sources */,
