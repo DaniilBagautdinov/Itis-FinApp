@@ -23,7 +23,7 @@ class TextbookTableViewCell: UITableViewCell {
     
     func setData(textBook: TextbookCellData){
         titleLabel.text = textBook.title
-        myImageView.image = UIImage(named: "TestPng")
+        myImageView.image = UIImage(named: textBook.image)
     }
 
 }

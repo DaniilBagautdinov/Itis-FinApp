@@ -17,15 +17,15 @@ class TextbookViewController: UIViewController {
         super.viewDidLoad()
         
         readFromFile()
-        data = [TextbookCellData(title: "Куда вложить деньги? Что такое инвестиции?", image: "", article: textArray[0]),
-                TextbookCellData(title: "Что такое биткоин?", image: "", article: textArray[1]),
-                TextbookCellData(title: "Сколько стоит биткоин?", image: "", article: textArray[2]),
-                TextbookCellData(title: "Как заработать с помощью биткоина?", image: "", article: textArray[3]),
-                TextbookCellData(title: "Банк хочет дать вам денег!", image: "", article: textArray[4]),
-                TextbookCellData(title: "Как стать успешным предпринимателем?", image: "", article: textArray[5]),
-                TextbookCellData(title: "5 мифов о налоговых вычетах", image: "", article: textArray[6]),
-                TextbookCellData(title: "Когда ждать возврата НДФЛ?", image: "", article: textArray[7]),
-                TextbookCellData(title: "Как получить налоговый вычет после COVID-19?", image: "", article: textArray[8])]
+        data = [TextbookCellData(title: "Куда вложить деньги? Что такое инвестиции?", image: "coin", article: textArray[0]),
+                TextbookCellData(title: "Что такое биткоин?", image: "bitcoin", article: textArray[1]),
+                TextbookCellData(title: "Сколько стоит биткоин?", image: "purse", article: textArray[2]),
+                TextbookCellData(title: "Как заработать с помощью биткоина?", image: "bitcoin-2", article: textArray[3]),
+                TextbookCellData(title: "Банк хочет дать вам денег!", image: "pay", article: textArray[4]),
+                TextbookCellData(title: "Как стать успешным предпринимателем?", image: "ownership", article: textArray[5]),
+                TextbookCellData(title: "5 мифов о налоговых вычетах", image: "tax", article: textArray[6]),
+                TextbookCellData(title: "Когда ждать возврата НДФЛ?", image: "calculator", article: textArray[7]),
+                TextbookCellData(title: "Как получить налоговый вычет после COVID-19?", image: "virus", article: textArray[8])]
         tableView.delegate = self
         tableView.dataSource = self
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"Назад", style:.plain, target:nil, action:nil)
