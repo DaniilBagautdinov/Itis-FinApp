@@ -15,7 +15,6 @@ class ArticleViewController: UIViewController {
         super.viewDidLoad()
         articleTextView.isEditable = false
         articleTextView.text = textbook?.article
-        navigationItem.title = "Статья"
         
     }
     

@@ -15,8 +15,8 @@
                 <navigationController id="4uM-Lm-LJM" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Учебник" selectedImage="book" catalog="system" id="UMs-LM-pux"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HXg-e4-qhM">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="HXg-e4-qhM">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="18.46153846153846" y="73.222748815165872"/>
         </scene>
-        <!--Article View Controller-->
+        <!--Статья-->
         <scene sceneID="zmb-SF-hQf">
             <objects>
-                <viewController storyboardIdentifier="ArticleViewController" id="IKk-a0-ama" customClass="ArticleViewController" customModule="Itis_FinApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticleViewController" title="Статья" id="IKk-a0-ama" customClass="ArticleViewController" customModule="Itis_FinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bd6-z9-dvL">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
