@@ -10,6 +10,10 @@
 		9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B42690F03F004842DE /* MainScreenViewController.swift */; };
 		9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */; };
 		A30A7BAF269440FC00E288DE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */; };
+		A33138C726947A730003D14B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38AF7DB269325FC00DBA9D3 /* Charts.framework */; };
+		A33138C826947A730003D14B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A38AF7DB269325FC00DBA9D3 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A33138D0269490C00003D14B /* DetailsCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */; };
+		A33138D426949E630003D14B /* DetailsCategorisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */; };
 		A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */; };
 		A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB72691DF5E000133B3 /* TextbookViewController.swift */; };
 		A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */; };
@@ -44,10 +48,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A33138C926947A730003D14B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A33138C826947A730003D14B /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9203B7B42690F03F004842DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAddViewController.swift; sourceTree = "<group>"; };
 		A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesViewController.swift; sourceTree = "<group>"; };
+		A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategorisTableViewCell.swift; sourceTree = "<group>"; };
 		A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A38AF7D5269325FC00DBA9D3 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Desktop/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		A5393AB72691DF5E000133B3 /* TextbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookViewController.swift; sourceTree = "<group>"; };
@@ -73,12 +93,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A33138C726947A730003D14B /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A33138C426947A730003D14B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A38AF7D6269325FC00DBA9D3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +121,7 @@
 			children = (
 				A54F39A02690748A008B3476 /* Itis-FinApp */,
 				A54F399F2690748A008B3476 /* Products */,
+				A33138C426947A730003D14B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +180,8 @@
 				A54F39BC26908978008B3476 /* Categories.storyboard */,
 				A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */,
 				A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */,
+				A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */,
+				A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -165,6 +196,7 @@
 				A54F399A2690748A008B3476 /* Sources */,
 				A54F399B2690748A008B3476 /* Frameworks */,
 				A54F399C2690748A008B3476 /* Resources */,
+				A33138C926947A730003D14B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A54F39A62690748A008B3476 /* ViewController.swift in Sources */,
+				A33138D426949E630003D14B /* DetailsCategorisTableViewCell.swift in Sources */,
 				A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */,
 				A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */,
 				9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */,
@@ -263,6 +296,7 @@
 				EB295BA52691BF6900EFF606 /* SpendingHistoryTableViewCell.swift in Sources */,
 				A54F39A42690748A008B3476 /* SceneDelegate.swift in Sources */,
 				A30A7BAF269440FC00E288DE /* CollectionViewCell.swift in Sources */,
+				A33138D0269490C00003D14B /* DetailsCategoriesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

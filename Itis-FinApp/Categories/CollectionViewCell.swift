@@ -10,4 +10,9 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var label: UILabel!
+    
+    func setData (category: Categories) {
+        imageView.image = UIImage (named: category.image)
+        label.text = category.name
+    }
 }
