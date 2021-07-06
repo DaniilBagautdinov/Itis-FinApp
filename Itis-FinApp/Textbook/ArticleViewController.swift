@@ -10,14 +10,13 @@ import UIKit
 class ArticleViewController: UIViewController {
     
     @IBOutlet weak var articleTextView: UITextView!
-    
     var textbook: TextbookCellData?
-
     override func viewDidLoad() {
         super.viewDidLoad()
-            
         articleTextView.isEditable = false
         articleTextView.text = textbook?.article
+        navigationItem.title = "Статья"
+        
     }
     
 
