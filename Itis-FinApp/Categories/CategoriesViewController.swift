@@ -32,6 +32,7 @@ class CategoriesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
         customizeChart(dataPoints: players, values: goals.map{ Double($0) })
     }
     
@@ -71,13 +72,26 @@ private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
 
 extension CategoriesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        categories.count
+        categories.count // count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell (withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
         cell.setData(category: categories[indexPath.row])
                 return cell
+    }
+    // Проверять, если не посоедний, то заполнять обычно, а если ласт то отобразить кнопку
+}
+
+extension CategoriesViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
+        guard let categoriesViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsCategoriesViewController") as? DetailsCategoriesViewController else {return}
+        categoriesViewController.categories = categories[indexPath.row]
+        
+        navigationController?.pushViewController(categoriesViewController, animated: true)
     }
 }
 
@@ -87,5 +101,5 @@ struct Categories {
     var totalSumm: Int
 }
 
-let players = ["Ozil", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
+let players = ["Развлечения", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
 let goals = [6, 8, 26, 30, 8, 10]

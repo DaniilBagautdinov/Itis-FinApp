@@ -108,7 +108,7 @@
         <!--Details Categories View Controller-->
         <scene sceneID="scx-w1-Vvv">
             <objects>
-                <viewController id="Q1B-Ok-Kjh" customClass="DetailsCategoriesViewController" customModule="Itis_FinApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailsCategoriesViewController" id="Q1B-Ok-Kjh" customClass="DetailsCategoriesViewController" customModule="Itis_FinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qyy-RX-tkF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,6 +147,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <connections>
+                                                <outlet property="money" destination="xSX-wu-odm" id="xK0-TQ-7MS"/>
+                                                <outlet property="name" destination="Tc4-y7-i5m" id="tr0-8l-cvF"/>
+                                                <outlet property="time" destination="fas-dH-Zgq" id="o36-5m-zk3"/>
+                                            </connections>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -155,6 +160,9 @@
                         <viewLayoutGuide key="safeArea" id="vmO-Bg-edE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="dVN-go-Rpw" id="agl-tm-uwq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNy-b3-kUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

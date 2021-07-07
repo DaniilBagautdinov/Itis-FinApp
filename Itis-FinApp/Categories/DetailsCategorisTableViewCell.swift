@@ -8,6 +8,10 @@
 import UIKit
 
 class DetailsCategorisTableViewCell: UITableViewCell {
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var money: UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -16,8 +20,6 @@ class DetailsCategorisTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

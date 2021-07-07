@@ -8,9 +8,15 @@
 import UIKit
 
 class DetailsCategoriesViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    var categories: Categories?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func setData () {
+        
     }
 
 }

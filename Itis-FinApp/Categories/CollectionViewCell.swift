@@ -15,4 +15,6 @@ class CollectionViewCell: UICollectionViewCell {
         imageView.image = UIImage (named: category.image)
         label.text = category.name
     }
+
+    
 }
