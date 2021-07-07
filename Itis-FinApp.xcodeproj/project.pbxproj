@@ -10,8 +10,8 @@
 		9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B42690F03F004842DE /* MainScreenViewController.swift */; };
 		9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */; };
 		A30A7BAF269440FC00E288DE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */; };
-		A33138C726947A730003D14B /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38AF7DB269325FC00DBA9D3 /* Charts.framework */; };
-		A33138C826947A730003D14B /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A38AF7DB269325FC00DBA9D3 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A30EECA32695B97A00E32786 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A38AF7DB269325FC00DBA9D3 /* Charts.framework */; };
+		A30EECA42695B97A00E32786 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A38AF7DB269325FC00DBA9D3 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A33138D0269490C00003D14B /* DetailsCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */; };
 		A33138D426949E630003D14B /* DetailsCategorisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */; };
 		A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */; };
@@ -49,13 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A33138C926947A730003D14B /* Embed Frameworks */ = {
+		A30EECA52695B97A00E32786 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A33138C826947A730003D14B /* Charts.framework in Embed Frameworks */,
+				A30EECA42695B97A00E32786 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A33138C726947A730003D14B /* Charts.framework in Frameworks */,
+				A30EECA32695B97A00E32786 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +196,7 @@
 				A54F399A2690748A008B3476 /* Sources */,
 				A54F399B2690748A008B3476 /* Frameworks */,
 				A54F399C2690748A008B3476 /* Resources */,
-				A33138C926947A730003D14B /* Embed Frameworks */,
+				A30EECA52695B97A00E32786 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

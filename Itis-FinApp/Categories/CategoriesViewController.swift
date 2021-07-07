@@ -72,13 +72,19 @@ private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
 
 extension CategoriesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        categories.count // count + 1
+        categories.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell (withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
-        cell.setData(category: categories[indexPath.row])
-                return cell
+        if indexPath.row != categories.count {
+            cell.setData(category: categories[indexPath.row])
+            return cell
+        } else {
+            cell.imageView.image = UIImage(systemName: "plus")
+            cell.label.text = "Добавление"
+            return cell
+        }
     }
     // Проверять, если не посоедний, то заполнять обычно, а если ласт то отобразить кнопку
 }
@@ -87,11 +93,14 @@ extension CategoriesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
-        guard let categoriesViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsCategoriesViewController") as? DetailsCategoriesViewController else {return}
-        categoriesViewController.categories = categories[indexPath.row]
-        
-        navigationController?.pushViewController(categoriesViewController, animated: true)
+        if indexPath.row != categories.count {
+            guard let categoriesViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsCategoriesViewController") as? DetailsCategoriesViewController else {return}
+            categoriesViewController.categories = categories[indexPath.row]
+            
+            navigationController?.pushViewController(categoriesViewController, animated: true)
+        } else {
+            print(123123)
+        }
     }
 }
 
