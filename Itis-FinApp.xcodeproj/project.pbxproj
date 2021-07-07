@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B42690F03F004842DE /* MainScreenViewController.swift */; };
 		9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */; };
-		929B0F902695BC6B001CDFBC /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 929B0F8D2695BC5F001CDFBC /* Charts.framework */; };
-		929B0F912695BC6B001CDFBC /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 929B0F8D2695BC5F001CDFBC /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A30A7BAF269440FC00E288DE /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */; };
 		A33138D0269490C00003D14B /* DetailsCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */; };
 		A33138D426949E630003D14B /* DetailsCategorisTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */; };
@@ -29,19 +27,20 @@
 		A54F39BA269078C2008B3476 /* MainScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39B9269078C2008B3476 /* MainScreen.storyboard */; };
 		A54F39BD26908978008B3476 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39BC26908978008B3476 /* Categories.storyboard */; };
 		EB295BA52691BF6900EFF606 /* SpendingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB295BA42691BF6900EFF606 /* SpendingHistoryTableViewCell.swift */; };
+		EB2C6D0C269606E80010EC09 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C6D0B269606E80010EC09 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		929B0F8C2695BC5F001CDFBC /* PBXContainerItemProxy */ = {
+		EB2C6D06269602E50010EC09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 929B0F872695BC5F001CDFBC /* Charts.xcodeproj */;
+			containerPortal = EB2C6D01269602E50010EC09 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		929B0F8E2695BC5F001CDFBC /* PBXContainerItemProxy */ = {
+		EB2C6D08269602E50010EC09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 929B0F872695BC5F001CDFBC /* Charts.xcodeproj */;
+			containerPortal = EB2C6D01269602E50010EC09 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
@@ -55,7 +54,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				929B0F912695BC6B001CDFBC /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,7 +63,6 @@
 /* Begin PBXFileReference section */
 		9203B7B42690F03F004842DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAddViewController.swift; sourceTree = "<group>"; };
-		929B0F872695BC5F001CDFBC /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesViewController.swift; sourceTree = "<group>"; };
 		A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategorisTableViewCell.swift; sourceTree = "<group>"; };
@@ -86,6 +83,8 @@
 		A54F39B9269078C2008B3476 /* MainScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainScreen.storyboard; sourceTree = "<group>"; };
 		A54F39BC26908978008B3476 /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		EB295BA42691BF6900EFF606 /* SpendingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		EB2C6D01269602E50010EC09 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Telegram Desktop/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		EB2C6D0B269606E80010EC09 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,22 +92,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				929B0F902695BC6B001CDFBC /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		929B0F882695BC5F001CDFBC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				929B0F8D2695BC5F001CDFBC /* Charts.framework */,
-				929B0F8F2695BC5F001CDFBC /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A33138C426947A730003D14B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +135,8 @@
 				A54F39AA2690748B008B3476 /* Assets.xcassets */,
 				A54F39AC2690748B008B3476 /* LaunchScreen.storyboard */,
 				A54F39AF2690748B008B3476 /* Info.plist */,
-				929B0F872695BC5F001CDFBC /* Charts.xcodeproj */,
+				EB2C6D01269602E50010EC09 /* Charts.xcodeproj */,
+				EB2C6D0B269606E80010EC09 /* Data.swift */,
 			);
 			path = "Itis-FinApp";
 			sourceTree = "<group>";
@@ -184,6 +174,15 @@
 				A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		EB2C6D02269602E50010EC09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB2C6D07269602E50010EC09 /* Charts.framework */,
+				EB2C6D09269602E50010EC09 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +233,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 929B0F882695BC5F001CDFBC /* Products */;
-					ProjectRef = 929B0F872695BC5F001CDFBC /* Charts.xcodeproj */;
+					ProductGroup = EB2C6D02269602E50010EC09 /* Products */;
+					ProjectRef = EB2C6D01269602E50010EC09 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -246,18 +245,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		929B0F8D2695BC5F001CDFBC /* Charts.framework */ = {
+		EB2C6D07269602E50010EC09 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 929B0F8C2695BC5F001CDFBC /* PBXContainerItemProxy */;
+			remoteRef = EB2C6D06269602E50010EC09 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		929B0F8F2695BC5F001CDFBC /* ChartsTests.xctest */ = {
+		EB2C6D09269602E50010EC09 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 929B0F8E2695BC5F001CDFBC /* PBXContainerItemProxy */;
+			remoteRef = EB2C6D08269602E50010EC09 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -291,6 +290,7 @@
 				9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */,
 				A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */,
 				A5393AC2269223C4000133B3 /* ArticleViewController.swift in Sources */,
+				EB2C6D0C269606E80010EC09 /* Data.swift in Sources */,
 				9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */,
 				A54F39A22690748A008B3476 /* AppDelegate.swift in Sources */,
 				EB295BA52691BF6900EFF606 /* SpendingHistoryTableViewCell.swift in Sources */,

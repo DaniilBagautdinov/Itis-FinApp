@@ -14,11 +14,13 @@
             <objects>
                 <navigationController id="0GS-xY-DAs" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Главная" id="dKf-eg-iq4"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="X0B-1s-ueN">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="X0B-1s-ueN">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l8v-Cq-AQh">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="E4n-ox-dPT"/>
                     </connections>
@@ -27,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-766" y="87"/>
         </scene>
-        <!--Main Screen View Controller-->
+        <!--Счет-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MainScreenViewController" id="Y6W-OH-hqX" customClass="MainScreenViewController" customModule="Itis_FinApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,6 +94,13 @@
                                             <action selector="addFinButtonAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CX1-pq-dLA"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Счёт" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHC-d6-Ele">
+                                        <rect key="frame" x="148" y="40" width="62" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                             </view>
@@ -99,7 +108,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="I0t-jp-A3b"/>
+                    <navigationItem key="navigationItem" title="Счет" id="I0t-jp-A3b"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addFinButton" destination="IPV-SG-dPq" id="sPP-10-79e"/>
