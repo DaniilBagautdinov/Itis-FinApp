@@ -26,8 +26,6 @@ class MainScreenAddViewController: UIViewController {
         categoryPickerView.delegate = self
         categoryPickerView.dataSource = self
         selectedCategory = categories[0]
-        var massive: [Operation] = []
-        defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
     }
 
     @IBAction func addButtonAction(_ sender: Any) {
@@ -36,18 +34,29 @@ class MainScreenAddViewController: UIViewController {
         }
         
         money = Float(moneyTextFiled.text ?? "0")!
-        let operation = Operation(isIncome: isIncome, money: money, category: selectedCategory ?? Categories(name:"None", image:"burger", totalSumm: 0))
         
-        guard (storyboard?.instantiateViewController(identifier: "MainScreenViewController") as? MainScreenViewController) != nil else { return }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yy"
+        date = dateFormatter.string(from: Date())
+        
+        let operation = Operation(isIncome: isIncome, money: money, category: selectedCategory ?? Categories(name:"None", image:"burger", totalSumm: 0), date: date)
         
         if let data = defaults.value(forKey: "operations") as? Data {
             var allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data)
             allOperations?.append(operation)
+            
             defaults.set(try? PropertyListEncoder().encode(allOperations), forKey: "operations")
-            tableViewToRefresh?.reloadData()
-            dismiss(animated:true)
+            
+            if operation.isIncome{
+                defaults.set(defaults.float(forKey: "allMoney") + operation.money, forKey: "allMoney")
+            } else{
+                defaults.set(defaults.float(forKey: "allMoney") - operation.money, forKey: "allMoney")
+            }
         }
         
+        guard (storyboard?.instantiateViewController(identifier: "MainScreenViewController") as? MainScreenViewController) != nil else { return }
+        tableViewToRefresh?.reloadData()
+        dismiss(animated:true)
     }
 }
 
@@ -75,13 +84,11 @@ struct Operation: Codable{
     var isIncome: Bool
     var money: Float
     var category: Categories?
-    
-//    var date: NSDate
+    var date: String
 }
+
 extension MainScreenAddViewController: SendTableViewToRefresh {
     func sendTableViewToRefresh(tableView: UITableView) {
         self.tableViewToRefresh = tableView
     }
-    
-    
 }
