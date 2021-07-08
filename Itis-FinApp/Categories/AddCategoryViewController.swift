@@ -39,7 +39,7 @@ class AddCategoryViewController: UIViewController {
     
     
     @objc func imageViewTap() {
-        print(123)
+        
     }
 }
 
