@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 var categories: [Categories] = [
     Categories(name: "Фастфуд", image: "burger", totalSumm: 0),
@@ -19,3 +20,5 @@ var categories: [Categories] = [
     Categories(name: "Развлечения", image: "kite", totalSumm: 0),
     Categories(name: "Кафе", image: "coffee-cup", totalSumm: 0)
 ]
+
+var imageNames: [String] = [""]

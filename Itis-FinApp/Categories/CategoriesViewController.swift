@@ -75,23 +75,31 @@ extension CategoriesViewController: UICollectionViewDataSource {
     // Проверять, если не посоедний, то заполнять обычно, а если ласт то отобразить кнопку
 }
 
+extension CategoriesViewController: AddCategoryViewControllerDelegate {
+    func updateCategoriesView() {
+        collectionView.reloadData()
+    }
+}
+
 extension CategoriesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         if indexPath.row != categories.count {
-            guard let categoriesViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsCategoriesViewController") as? DetailsCategoriesViewController else {return}
-            categoriesViewController.categories = categories[indexPath.row]
+            guard let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsCategoriesViewController") as? DetailsCategoriesViewController else {return}
+            detailsViewController.categories = categories[indexPath.row]
             
-            navigationController?.pushViewController(categoriesViewController, animated: true)
+            navigationController?.pushViewController(detailsViewController, animated: true)
         } else {
-            print(123123)
+            guard let addCategoryViewController = storyboard?.instantiateViewController(withIdentifier: "AddCategoryViewController") as? AddCategoryViewController else {return}
+            addCategoryViewController.delegate = self
+            present(addCategoryViewController, animated: true)
         }
     }
 }
 
 struct Categories: Codable {
-    let name: String
+    var name: String
     let image: String
     var totalSumm: Int
 }

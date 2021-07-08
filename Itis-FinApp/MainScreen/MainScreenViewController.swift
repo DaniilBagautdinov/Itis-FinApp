@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol SendTableViewToRefresh: class {
+protocol SendTableViewToRefresh: AnyObject {
     func sendTableViewToRefresh(tableView: UITableView)
 }
 
