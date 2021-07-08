@@ -7,7 +7,10 @@
 
 import UIKit
 
-
+protocol MainScreenAddViewControllerDelegate: AnyObject {
+    func updateSpendingHistoryTableView()
+    func updateAllMoneyLabel()
+}
 
 class MainScreenAddViewController: UIViewController {
     @IBOutlet weak var finSegmentedControl: UISegmentedControl!
@@ -19,7 +22,7 @@ class MainScreenAddViewController: UIViewController {
     var isIncome: Bool = false
     var money: Float = 0
     var date: String = ""
-    weak var tableViewToRefresh: UITableView?
+    weak var delegate: MainScreenAddViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +58,8 @@ class MainScreenAddViewController: UIViewController {
         }
         
         guard (storyboard?.instantiateViewController(identifier: "MainScreenViewController") as? MainScreenViewController) != nil else { return }
-        tableViewToRefresh?.reloadData()
+        delegate?.updateSpendingHistoryTableView()
+        delegate?.updateAllMoneyLabel()
         dismiss(animated:true)
     }
 }
@@ -87,8 +91,3 @@ struct Operation: Codable{
     var date: String
 }
 
-extension MainScreenAddViewController: SendTableViewToRefresh {
-    func sendTableViewToRefresh(tableView: UITableView) {
-        self.tableViewToRefresh = tableView
-    }
-}
