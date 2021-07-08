@@ -17,7 +17,7 @@ class TextbookViewController: UIViewController {
         super.viewDidLoad()
         
         readFromFile()
-        data = [TextbookCellData(title: "Куда вложить деньги? Что такое инвестиции?", image: "coin", article: textArray[0]),
+        data = [TextbookCellData(title: "Куда вложить деньги? Что такое инвестиции?", image: "money", article: textArray[0]),
                 TextbookCellData(title: "Что такое биткоин?", image: "bitcoin", article: textArray[1]),
                 TextbookCellData(title: "Сколько стоит биткоин?", image: "purse", article: textArray[2]),
                 TextbookCellData(title: "Как заработать с помощью биткоина?", image: "bitcoin-2", article: textArray[3]),
@@ -25,7 +25,10 @@ class TextbookViewController: UIViewController {
                 TextbookCellData(title: "Как стать успешным предпринимателем?", image: "ownership", article: textArray[5]),
                 TextbookCellData(title: "5 мифов о налоговых вычетах", image: "tax", article: textArray[6]),
                 TextbookCellData(title: "Когда ждать возврата НДФЛ?", image: "calculator", article: textArray[7]),
-                TextbookCellData(title: "Как получить налоговый вычет после COVID-19?", image: "virus", article: textArray[8])]
+                TextbookCellData(title: "Как получить налоговый вычет после COVID-19?", image: "virus", article: textArray[8]),
+                TextbookCellData(title: "Как стать богатым и успешным?", image: "success", article: textArray[9]),
+                TextbookCellData(title: "Как правильно взять кредит?", image: "credit-card", article: textArray[10]),
+                TextbookCellData(title: "Стоит ли вам ввязываться в ипотеку?", image: "mortgage-2", article: textArray[11])]
         tableView.delegate = self
         tableView.dataSource = self
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"Назад", style:.plain, target:nil, action:nil)
