@@ -15,12 +15,16 @@ protocol MainScreenAddViewControllerDelegate: AnyObject {
 class MainScreenAddViewController: UIViewController {
     @IBOutlet weak var finSegmentedControl: UISegmentedControl!
     @IBOutlet weak var moneyTextFiled: UITextField!
+    @IBOutlet weak var nameTextFiled: UITextField!
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var categoryPickerView: UIPickerView!
+    @IBOutlet weak var warningLabel: UILabel!
+    
     let defaults = UserDefaults.standard
     var selectedCategory: Categories?
     var isIncome: Bool = false
     var money: Float = 0
+    var name: String = ""
     var date: String = ""
     weak var delegate: MainScreenAddViewControllerDelegate?
     
@@ -32,35 +36,57 @@ class MainScreenAddViewController: UIViewController {
     }
 
     @IBAction func addButtonAction(_ sender: Any) {
-        if finSegmentedControl.selectedSegmentIndex == 0 {
-            isIncome = true
-        }
-        
-        money = Float(moneyTextFiled.text ?? "0")!
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yy"
-        date = dateFormatter.string(from: Date())
-        
-        let operation = Operation(isIncome: isIncome, money: money, category: selectedCategory ?? Categories(name:"None", image:"burger", totalSumm: 0), date: date)
-        
-        if let data = defaults.value(forKey: "operations") as? Data {
-            var allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data)
-            allOperations?.append(operation)
+        print(isMoneyValid(money: moneyTextFiled.text))
+        if isMoneyValid(money: moneyTextFiled.text){
             
-            defaults.set(try? PropertyListEncoder().encode(allOperations), forKey: "operations")
+            money = Float(moneyTextFiled.text ?? "0")!
+            name = makeValidName(name: nameTextFiled.text)
             
-            if operation.isIncome{
-                defaults.set(defaults.float(forKey: "allMoney") + operation.money, forKey: "allMoney")
-            } else{
-                defaults.set(defaults.float(forKey: "allMoney") - operation.money, forKey: "allMoney")
+            if finSegmentedControl.selectedSegmentIndex == 0 {
+                isIncome = true
             }
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd.MM.yy"
+            date = dateFormatter.string(from: Date())
+            
+            let operation = Operation(isIncome: isIncome, money: money, category: selectedCategory ?? Categories(name:"None", image:"burger", totalSumm: 0), date: date, name: name)
+            
+            if let data = defaults.value(forKey: "operations") as? Data {
+                var allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data)
+                allOperations?.append(operation)
+                
+                defaults.set(try? PropertyListEncoder().encode(allOperations), forKey: "operations")
+                
+                if operation.isIncome{
+                    defaults.set(defaults.float(forKey: "allMoney") + operation.money, forKey: "allMoney")
+                } else{
+                    defaults.set(defaults.float(forKey: "allMoney") - operation.money, forKey: "allMoney")
+                }
+            }
+            
+            guard (storyboard?.instantiateViewController(identifier: "MainScreenViewController") as? MainScreenViewController) != nil else { return }
+            delegate?.updateSpendingHistoryTableView()
+            delegate?.updateAllMoneyLabel()
+            dismiss(animated:true)
+            
+        } else{
+            warningLabel.text = "Некорректная сумма"
+        }
+    }
+    
+    func makeValidName(name: String?) -> String{
+        return name ?? ""
+    }
+    
+    func isMoneyValid(money: String?) -> Bool{
+        if money == nil{
+            return false
         }
         
-        guard (storyboard?.instantiateViewController(identifier: "MainScreenViewController") as? MainScreenViewController) != nil else { return }
-        delegate?.updateSpendingHistoryTableView()
-        delegate?.updateAllMoneyLabel()
-        dismiss(animated:true)
+        guard let floatFromString = Float(money!) else { return false }
+        
+        return true
     }
 }
 
@@ -89,5 +115,6 @@ struct Operation: Codable{
     var money: Float
     var category: Categories?
     var date: String
+    var name: String
 }
 
