@@ -33,13 +33,13 @@ class AddCategoryViewController: UIViewController {
         categories.append(Categories(name: name, image: "burger", totalSumm: 0))
         delegate?.updateCategoriesView()
         dismiss(animated: true)
-        
     }
     
     
     
     @objc func imageViewTap() {
-        
+        guard let imagePickerViewController = storyboard?.instantiateViewController(withIdentifier: "ImagePickerViewController") as? ImagePickerViewController else {return}
+        present(imagePickerViewController, animated: true)
     }
 }
 

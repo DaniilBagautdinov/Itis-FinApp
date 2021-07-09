@@ -21,4 +21,4 @@ var categories: [Categories] = [
     Categories(name: "Кафе", image: "coffee-cup", totalSumm: 0)
 ]
 
-var imageNames: [String] = [""]
+var imageNames: [String] = ["burger","hospital","shopping-cart","beer-bottle","van","mortarboard","football-ball","kurta","kite","coffee-cup"]
