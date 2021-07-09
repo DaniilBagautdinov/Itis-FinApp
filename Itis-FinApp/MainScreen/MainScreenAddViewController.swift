@@ -38,6 +38,7 @@ class MainScreenAddViewController: UIViewController {
     @IBAction func addButtonAction(_ sender: Any) {
         print(isMoneyValid(money: moneyTextFiled.text))
         if isMoneyValid(money: moneyTextFiled.text){
+            
             money = Float(moneyTextFiled.text ?? "0")!
             name = makeValidName(name: nameTextFiled.text)
             
