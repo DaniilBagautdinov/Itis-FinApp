@@ -13,6 +13,6 @@ class ImagePickerCollectionViewCell: UICollectionViewCell {
     
     func setData (name: String) {
         imageView.image = UIImage (named: name)
-    }
-    
+        }
+
 }

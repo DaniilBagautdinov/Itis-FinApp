@@ -7,13 +7,20 @@
 
 import UIKit
 
+protocol TapImageDelegate: AnyObject {
+    func saveImageView(image: String)
+}
+
 class ImagePickerViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-
+    
+    weak var delegate: TapImageDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
@@ -26,5 +33,13 @@ extension ImagePickerViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell (withReuseIdentifier: "ImagePickerCollectionViewCell", for: indexPath) as? ImagePickerCollectionViewCell else {return UICollectionViewCell()}
             cell.setData(name: imageNames[indexPath.row])
             return cell
-        }
+    }
+    
+}
+
+extension ImagePickerViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.saveImageView(image: imageNames[indexPath.row])
+        dismiss(animated: true)
+    }
 }

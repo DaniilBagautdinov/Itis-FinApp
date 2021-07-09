@@ -19,8 +19,10 @@ class DetailsCategoriesViewController: UIViewController {
     
     override func viewDidLoad() {
             super.viewDidLoad()
+            tableView.tableFooterView = UIView()
             tableView.dataSource = self
             tableView.delegate = self
+            navigationItem.title = categories?.name
             setData()
 
         }
