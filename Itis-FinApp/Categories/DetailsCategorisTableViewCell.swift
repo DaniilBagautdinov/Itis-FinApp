@@ -17,9 +17,10 @@ class DetailsCategorisTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
+    func setData (operation: Operation) {
+        name.text = operation.category?.name
+        time.text = operation.date
+        money.text = "\(operation.money)"
     }
-
 }
