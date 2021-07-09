@@ -31,6 +31,8 @@
 		A54F39BD26908978008B3476 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A54F39BC26908978008B3476 /* Categories.storyboard */; };
 		EB295BA52691BF6900EFF606 /* SpendingHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB295BA42691BF6900EFF606 /* SpendingHistoryTableViewCell.swift */; };
 		EB2C6D0C269606E80010EC09 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C6D0B269606E80010EC09 /* Data.swift */; };
+		EB2C6D2326988C9D0010EC09 /* MainScreenExpenseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C6D2226988C9D0010EC09 /* MainScreenExpenseDetailViewController.swift */; };
+		EB2C6D2726988DE50010EC09 /* ExpenseDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB2C6D2626988DE50010EC09 /* ExpenseDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		EB295BA42691BF6900EFF606 /* SpendingHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendingHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		EB2C6D0B269606E80010EC09 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		EB2C6D182697609F0010EC09 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Telegram Desktop/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		EB2C6D2226988C9D0010EC09 /* MainScreenExpenseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenExpenseDetailViewController.swift; sourceTree = "<group>"; };
+		EB2C6D2626988DE50010EC09 /* ExpenseDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpenseDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 				9203B7B42690F03F004842DE /* MainScreenViewController.swift */,
 				9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */,
 				EB295BA42691BF6900EFF606 /* SpendingHistoryTableViewCell.swift */,
+				EB2C6D2226988C9D0010EC09 /* MainScreenExpenseDetailViewController.swift */,
+				EB2C6D2626988DE50010EC09 /* ExpenseDetailTableViewCell.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -298,11 +304,13 @@
 				A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */,
 				9203B7B92690FA29004842DE /* MainScreenAddViewController.swift in Sources */,
 				A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */,
+				EB2C6D2726988DE50010EC09 /* ExpenseDetailTableViewCell.swift in Sources */,
 				A3BD455D2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift in Sources */,
 				A5393AC2269223C4000133B3 /* ArticleViewController.swift in Sources */,
 				EB2C6D0C269606E80010EC09 /* Data.swift in Sources */,
 				9203B7B52690F03F004842DE /* MainScreenViewController.swift in Sources */,
 				A54F39A22690748A008B3476 /* AppDelegate.swift in Sources */,
+				EB2C6D2326988C9D0010EC09 /* MainScreenExpenseDetailViewController.swift in Sources */,
 				A3BD455B2697B64F00AB46C5 /* ImagePickerViewController.swift in Sources */,
 				EB295BA52691BF6900EFF606 /* SpendingHistoryTableViewCell.swift in Sources */,
 				A386B2ED2696488F0089C3D9 /* AddCategoryViewController.swift in Sources */,

@@ -28,6 +28,7 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         defaults.set(0, forKey: "allMoney")
         spendingHistoryTableView.dataSource = self
+        spendingHistoryTableView.delegate = self
         
         let massive: [Operation] = []
         defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
@@ -52,6 +53,17 @@ extension MainScreenViewController: UITableViewDataSource {
         }
         
         return cell
+    }
+}
+extension MainScreenViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        spendingHistoryTableView.deselectRow(at: indexPath, animated: true)
+        guard let mainScreenExpenseDetailViewController = storyboard?.instantiateViewController(identifier: "MainScreenExpenseDetailViewController") as? MainScreenExpenseDetailViewController else { return }
+        if let data = defaults.value(forKey: "operations") as? Data {
+            let allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data)
+            mainScreenExpenseDetailViewController.operation = allOperations?[indexPath.row]
+            navigationController?.pushViewController(mainScreenExpenseDetailViewController, animated: true)
+        }
     }
 }
 
