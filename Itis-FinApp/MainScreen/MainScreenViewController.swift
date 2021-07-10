@@ -33,7 +33,6 @@ class MainScreenViewController: UIViewController {
         
         let massive: [Operation] = []
         defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
-        defaults.set(try? PropertyListEncoder().encode(categories), forKey: "categories")
         
         allMoneyLabel.text = "0.0"
     }

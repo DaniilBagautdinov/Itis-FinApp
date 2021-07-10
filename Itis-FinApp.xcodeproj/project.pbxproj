@@ -16,6 +16,8 @@
 		A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */; };
 		A3BD455B2697B64F00AB46C5 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD455A2697B64F00AB46C5 /* ImagePickerViewController.swift */; };
 		A3BD455D2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD455C2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift */; };
+		A3C354A42699E99F000B5812 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C354A12699E98E000B5812 /* Charts.framework */; };
+		A3C354A52699E99F000B5812 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3C354A12699E98E000B5812 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB72691DF5E000133B3 /* TextbookViewController.swift */; };
 		A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */; };
 		A5393AC02691E4C2000133B3 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5393ABF2691E4C2000133B3 /* text.txt */; };
@@ -36,26 +38,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		927022A42698A54000B472AE /* PBXContainerItemProxy */ = {
+		A3C354A02699E98E000B5812 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9270229F2698A54000B472AE /* Charts.xcodeproj */;
+			containerPortal = A3C3549B2699E98E000B5812 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		927022A62698A54000B472AE /* PBXContainerItemProxy */ = {
+		A3C354A22699E98E000B5812 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9270229F2698A54000B472AE /* Charts.xcodeproj */;
+			containerPortal = A3C3549B2699E98E000B5812 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A3A3F7AA2699E8DC00262EA3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A3C354A52699E99F000B5812 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9203B7B42690F03F004842DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		9203B7B82690FA29004842DE /* MainScreenAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAddViewController.swift; sourceTree = "<group>"; };
-		9270229F2698A54000B472AE /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		A30A7BAE269440FC00E288DE /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		A33138CF269490C00003D14B /* DetailsCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategoriesViewController.swift; sourceTree = "<group>"; };
 		A33138D326949E630003D14B /* DetailsCategorisTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCategorisTableViewCell.swift; sourceTree = "<group>"; };
@@ -63,6 +78,7 @@
 		A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A3BD455A2697B64F00AB46C5 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		A3BD455C2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCollectionViewCell.swift; sourceTree = "<group>"; };
+		A3C3549B2699E98E000B5812 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
 		A5393AB72691DF5E000133B3 /* TextbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookViewController.swift; sourceTree = "<group>"; };
 		A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookTableViewCell.swift; sourceTree = "<group>"; };
 		A5393ABF2691E4C2000133B3 /* text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
@@ -89,26 +105,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3C354A42699E99F000B5812 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		927022A02698A54000B472AE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				927022A52698A54000B472AE /* Charts.framework */,
-				927022A72698A54000B472AE /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		A33138C426947A730003D14B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A3C3549C2699E98E000B5812 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A3C354A12699E98E000B5812 /* Charts.framework */,
+				A3C354A32699E98E000B5812 /* ChartsTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		A54F39952690748A008B3476 = {
@@ -142,7 +159,7 @@
 				A54F39AC2690748B008B3476 /* LaunchScreen.storyboard */,
 				A54F39AF2690748B008B3476 /* Info.plist */,
 				EB2C6D0B269606E80010EC09 /* Data.swift */,
-				9270229F2698A54000B472AE /* Charts.xcodeproj */,
+				A3C3549B2699E98E000B5812 /* Charts.xcodeproj */,
 			);
 			path = "Itis-FinApp";
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 				A54F399A2690748A008B3476 /* Sources */,
 				A54F399B2690748A008B3476 /* Frameworks */,
 				A54F399C2690748A008B3476 /* Resources */,
+				A3A3F7AA2699E8DC00262EA3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -234,8 +252,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 927022A02698A54000B472AE /* Products */;
-					ProjectRef = 9270229F2698A54000B472AE /* Charts.xcodeproj */;
+					ProductGroup = A3C3549C2699E98E000B5812 /* Products */;
+					ProjectRef = A3C3549B2699E98E000B5812 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -246,18 +264,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		927022A52698A54000B472AE /* Charts.framework */ = {
+		A3C354A12699E98E000B5812 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 927022A42698A54000B472AE /* PBXContainerItemProxy */;
+			remoteRef = A3C354A02699E98E000B5812 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		927022A72698A54000B472AE /* ChartsTests.xctest */ = {
+		A3C354A32699E98E000B5812 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 927022A62698A54000B472AE /* PBXContainerItemProxy */;
+			remoteRef = A3C354A22699E98E000B5812 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -450,13 +468,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SB3B62C7R7;
 				INFOPLIST_FILE = "Itis-FinApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ITIS.Itis-FinApp";
+				PRODUCT_BUNDLE_IDENTIFIER = ITIS.Itis.FinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -469,13 +488,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SB3B62C7R7;
 				INFOPLIST_FILE = "Itis-FinApp/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "ITIS.Itis-FinApp";
+				PRODUCT_BUNDLE_IDENTIFIER = ITIS.Itis.FinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

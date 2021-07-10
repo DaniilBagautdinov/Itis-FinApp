@@ -9,11 +9,16 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
+    let defaults = UserDefaults.standard
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if !defaults.bool(forKey: "isNotFirstTime") {
+            defaults.set(try? PropertyListEncoder().encode(categories), forKey: "categories")
+        } else {
+            defaults.setValue(true, forKey: "isNotFirstTime")
+        }
         return true
     }
 

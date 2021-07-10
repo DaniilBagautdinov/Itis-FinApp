@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import Charts
+//import Charts
 
 
 class CategoriesViewController: UIViewController {
 
-    @IBOutlet weak var pieChartView: PieChartView!
+    //@IBOutlet weak var pieChartView: PieChart!
     @IBOutlet weak var collectionView: UICollectionView!
     
     
@@ -19,29 +19,30 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        customizeChart(dataPoints: players, values: goals.map{ Double($0) })
+        //customizeChart(dataPoints: players, values: goals.map{ Double($0) })
+    
     }
     
-    func customizeChart(dataPoints: [String], values: [Double]) {
-      
-      // 1. Set ChartDataEntry
-      var dataEntries: [ChartDataEntry] = []
-      for i in 0..<dataPoints.count {
-        let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
-        dataEntries.append(dataEntry)
-      }
-      // 2. Set ChartDataSet
-      let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-      pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
-      // 3. Set ChartData
-      let pieChartData = PieChartData(dataSet: pieChartDataSet)
-      let format = NumberFormatter()
-      format.numberStyle = .none
-      let formatter = DefaultValueFormatter(formatter: format)
-      pieChartData.setValueFormatter(formatter)
-      // 4. Assign it to the chart’s data
-      pieChartView.data = pieChartData
-    }
+//    func customizeChart(dataPoints: [String], values: [Double]) {
+//
+//      // 1. Set ChartDataEntry
+//      var dataEntries: [ChartDataEntry] = []
+//      for i in 0..<dataPoints.count {
+//        let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+//        dataEntries.append(dataEntry)
+//      }
+//      // 2. Set ChartDataSet
+//      let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
+//      pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
+//      // 3. Set ChartData
+//      let pieChartData = PieChartData(dataSet: pieChartDataSet)
+//      let format = NumberFormatter()
+//      format.numberStyle = .none
+//      let formatter = DefaultValueFormatter(formatter: format)
+//      pieChartData.setValueFormatter(formatter)
+//      // 4. Assign it to the chart’s data
+//      pieChartView.data = pieChartData
+//    }
 }
 
 private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
@@ -58,13 +59,13 @@ private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
 
 extension CategoriesViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        categories.count + 1
+        categoryDefaults.count + 1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell (withReuseIdentifier: "CollectionViewCell", for: indexPath) as? CollectionViewCell else {return UICollectionViewCell()}
-        if indexPath.row != categories.count {
-            cell.setData(category: categories[indexPath.row])
+        if indexPath.row != categoryDefaults.count {
+            cell.setData(category: categoryDefaults[indexPath.row])
             return cell
         } else {
             cell.imageView.image = UIImage(systemName: "plus")
@@ -85,9 +86,9 @@ extension CategoriesViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        if indexPath.row != categories.count {
+        if indexPath.row != categoryDefaults.count {
             guard let detailsViewController = storyboard?.instantiateViewController(withIdentifier: "DetailsCategoriesViewController") as? DetailsCategoriesViewController else {return}
-            detailsViewController.categories = categories[indexPath.row]
+            detailsViewController.categories = categoryDefaults[indexPath.row]
             
             navigationController?.pushViewController(detailsViewController, animated: true)
         } else {
@@ -102,6 +103,17 @@ struct Categories: Codable {
     var name: String
     let image: String
     var totalSumm: Int
+}
+
+var categoryDefaults: [Categories] {
+    get {
+        guard let data = UserDefaults.standard.value(forKey: "categories") as? Data else { return [] }
+        
+        return try! PropertyListDecoder().decode(Array<Categories>.self, from: data)
+    }
+    set {
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey: "categories")
+    }
 }
 
 let players = ["Развлечения", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]

@@ -17,7 +17,7 @@ class AddCategoryViewController: UIViewController {
     @IBOutlet weak var pickerImageView: UIImageView!
     
     var pickedImage: String?
-    
+    let defaults = UserDefaults.standard
     
     var category: Categories?
     weak var delegate: AddCategoryViewControllerDelegate?
@@ -33,8 +33,7 @@ class AddCategoryViewController: UIViewController {
     
     @IBAction func saveButton(_ sender: Any) {
         guard let name = textField.text else {return}
-        print(pickerImageView.description)
-        categories.append(Categories(name: name, image: pickedImage ?? "burger", totalSumm: 0))
+        categoryDefaults.append(Categories(name: name, image: pickedImage ?? "burger", totalSumm: 0))
         delegate?.updateCategoriesView()
         dismiss(animated: true)
     }
