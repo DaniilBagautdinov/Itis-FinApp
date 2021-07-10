@@ -90,7 +90,7 @@
         <scene sceneID="iYs-JV-7XD">
             <objects>
                 <navigationController title="Navigation Controller" id="Hzv-vZ-Lb3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Категории" id="UQR-XX-70C"/>
+                    <tabBarItem key="tabBarItem" title="Категории" image="tray.full" catalog="system" id="UQR-XX-70C"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ElW-qj-bNt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -297,6 +297,7 @@
     <resources>
         <image name="burger" width="512" height="512"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="tray.full" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

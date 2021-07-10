@@ -16,8 +16,8 @@
 		A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */; };
 		A3BD455B2697B64F00AB46C5 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD455A2697B64F00AB46C5 /* ImagePickerViewController.swift */; };
 		A3BD455D2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD455C2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift */; };
-		A3C354A42699E99F000B5812 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C354A12699E98E000B5812 /* Charts.framework */; };
-		A3C354A52699E99F000B5812 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A3C354A12699E98E000B5812 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5195F80269A04BC006FEB26 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5195F7D269A04B6006FEB26 /* Charts.framework */; };
+		A5195F81269A04BC006FEB26 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5195F7D269A04B6006FEB26 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB72691DF5E000133B3 /* TextbookViewController.swift */; };
 		A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */; };
 		A5393AC02691E4C2000133B3 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5393ABF2691E4C2000133B3 /* text.txt */; };
@@ -38,16 +38,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A3C354A02699E98E000B5812 /* PBXContainerItemProxy */ = {
+		A5195F7C269A04B6006FEB26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A3C3549B2699E98E000B5812 /* Charts.xcodeproj */;
+			containerPortal = A5195F77269A04B6006FEB26 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		A3C354A22699E98E000B5812 /* PBXContainerItemProxy */ = {
+		A5195F7E269A04B6006FEB26 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A3C3549B2699E98E000B5812 /* Charts.xcodeproj */;
+			containerPortal = A5195F77269A04B6006FEB26 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
@@ -61,7 +61,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A3C354A52699E99F000B5812 /* Charts.framework in Embed Frameworks */,
+				A5195F81269A04BC006FEB26 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -78,7 +78,7 @@
 		A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		A3BD455A2697B64F00AB46C5 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		A3BD455C2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCollectionViewCell.swift; sourceTree = "<group>"; };
-		A3C3549B2699E98E000B5812 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../../Downloads/Charts-master 2/Charts.xcodeproj"; sourceTree = "<group>"; };
+		A5195F77269A04B6006FEB26 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		A5393AB72691DF5E000133B3 /* TextbookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookViewController.swift; sourceTree = "<group>"; };
 		A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookTableViewCell.swift; sourceTree = "<group>"; };
 		A5393ABF2691E4C2000133B3 /* text.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.txt; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3C354A42699E99F000B5812 /* Charts.framework in Frameworks */,
+				A5195F80269A04BC006FEB26 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,11 +119,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A3C3549C2699E98E000B5812 /* Products */ = {
+		A5195F78269A04B6006FEB26 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A3C354A12699E98E000B5812 /* Charts.framework */,
-				A3C354A32699E98E000B5812 /* ChartsTests.xctest */,
+				A5195F7D269A04B6006FEB26 /* Charts.framework */,
+				A5195F7F269A04B6006FEB26 /* ChartsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,7 +159,7 @@
 				A54F39AC2690748B008B3476 /* LaunchScreen.storyboard */,
 				A54F39AF2690748B008B3476 /* Info.plist */,
 				EB2C6D0B269606E80010EC09 /* Data.swift */,
-				A3C3549B2699E98E000B5812 /* Charts.xcodeproj */,
+				A5195F77269A04B6006FEB26 /* Charts.xcodeproj */,
 			);
 			path = "Itis-FinApp";
 			sourceTree = "<group>";
@@ -252,8 +252,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = A3C3549C2699E98E000B5812 /* Products */;
-					ProjectRef = A3C3549B2699E98E000B5812 /* Charts.xcodeproj */;
+					ProductGroup = A5195F78269A04B6006FEB26 /* Products */;
+					ProjectRef = A5195F77269A04B6006FEB26 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -264,18 +264,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		A3C354A12699E98E000B5812 /* Charts.framework */ = {
+		A5195F7D269A04B6006FEB26 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = A3C354A02699E98E000B5812 /* PBXContainerItemProxy */;
+			remoteRef = A5195F7C269A04B6006FEB26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		A3C354A32699E98E000B5812 /* ChartsTests.xctest */ = {
+		A5195F7F269A04B6006FEB26 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = A3C354A22699E98E000B5812 /* PBXContainerItemProxy */;
+			remoteRef = A5195F7E269A04B6006FEB26 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
