@@ -26,8 +26,8 @@ extension MainScreenExpenseDetailViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseDetailTableViewCell", for: indexPath) as? ExpenseDetailTableViewCell else { return UITableViewCell() }
             switch indexPath.row {
             case 0:
-                print(1)
-//              cell.setData(name: "Название", data: allOperations?[indexPath.row].name)
+//                print(1)
+                cell.setData(name: "Название", data: operation?.name ?? "???")
             case 1:
                 cell.setData(name: "Категория", data: operation?.category?.name ?? "???")
             case 2:
