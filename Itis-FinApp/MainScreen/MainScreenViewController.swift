@@ -50,10 +50,15 @@ extension MainScreenViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SpendingHistoryTableViewCell", for: indexPath) as? SpendingHistoryTableViewCell else { return UITableViewCell() }
         if let data = defaults.value(forKey: "operations") as? Data {
             let allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data)
-//            if allOperations?[indexPath.row].isIncome {
-                
-//            }
-            cell.setData(expense: "\(allOperations?[indexPath.row].money ?? 0)", category: allOperations?[indexPath.row].category?.name ?? "???")
+            if let isIncome = allOperations?[indexPath.row].isIncome {
+                if isIncome {
+                    cell.setData(expense: "+\(allOperations?[indexPath.row].money ?? 0)", category: allOperations?[indexPath.row].category?.name ?? "???")
+                    cell.expenseLabel.textColor = UIColor.systemGreen
+                } else {
+                    cell.setData(expense: "-\(allOperations?[indexPath.row].money ?? 0)", category: allOperations?[indexPath.row].category?.name ?? "???")
+                    cell.expenseLabel.textColor = UIColor.systemRed
+                }
+            }
         }
         
         return cell
