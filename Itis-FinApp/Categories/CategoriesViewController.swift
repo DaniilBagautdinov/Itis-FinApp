@@ -31,7 +31,7 @@ class CategoriesViewController: UIViewController {
       // 1. Set ChartDataEntry
       var dataEntries: [ChartDataEntry] = []
       for i in 0..<dataPoints.count {
-        let dataEntry = PieChartDataEntry(value: values[i], label: dataPoints[i], data: dataPoints[i] as AnyObject)
+        let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i].name, data: dataPoints[i] as AnyObject)
         dataEntries.append(dataEntry)
       }
       // 2. Set ChartDataSet
@@ -120,7 +120,17 @@ var categoryDefaults: [Categories] {
     }
 }
 
-var allTotalCounts: [Float] = []
+var allTotalCounts: [Float] {
+    get {
+        guard let data = UserDefaults.standard.value(forKey: "counts") as? Data else { return [0,0,0,0,0,0,0,0,0,0] }
+        
+        return try! PropertyListDecoder().decode(Array<Float>.self, from: data)
+    }
+    set {
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey: "counts")
+    }
+}
+
 
 let players = ["Развлечения", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
 let goals = [6, 8, 26, 30, 8, 10]
