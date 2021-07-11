@@ -19,7 +19,7 @@ class DetailsCategorisTableViewCell: UITableViewCell {
     }
     
     func setData (operation: Operation) {
-        name.text = operation.category?.name
+        name.text = operation.name
         time.text = operation.date
         money.text = "\(operation.money)"
     }

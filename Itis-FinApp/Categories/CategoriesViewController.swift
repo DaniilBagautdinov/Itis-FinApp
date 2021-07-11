@@ -15,16 +15,18 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var defaults = UserDefaults.standard
+    var operations: [Operation] = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        customizeChart(dataPoints: players, values: goals.map{ Double($0) })
+        customizeChart(dataPoints: categoryDefaults, values: allTotalCounts.map{ Float($0) })
     
     }
     
-    func customizeChart(dataPoints: [String], values: [Double]) {
+    func customizeChart(dataPoints: [Categories], values: [Float]) {
 
       // 1. Set ChartDataEntry
       var dataEntries: [ChartDataEntry] = []
