@@ -34,6 +34,9 @@ class AddCategoryViewController: UIViewController {
     @IBAction func saveButton(_ sender: Any) {
         guard let name = textField.text else {return}
         categoryDefaults.append(Categories(name: name, image: pickedImage ?? "burger", totalSumm: 0))
+        
+        allTotalCounts.append(0)
+    
         delegate?.updateCategoriesView()
         dismiss(animated: true)
     }

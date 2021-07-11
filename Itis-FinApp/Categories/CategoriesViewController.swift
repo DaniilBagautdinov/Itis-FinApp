@@ -14,6 +14,7 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,7 @@ extension CategoriesViewController: UICollectionViewDataSource {
         } else {
             cell.imageView.image = UIImage(systemName: "plus")
             cell.label.text = "Добавление"
+            
             return cell
         }
     }
@@ -102,7 +104,7 @@ extension CategoriesViewController: UICollectionViewDelegate {
 struct Categories: Codable {
     var name: String
     let image: String
-    var totalSumm: Int
+    var totalSumm: Float
 }
 
 var categoryDefaults: [Categories] {
@@ -115,6 +117,8 @@ var categoryDefaults: [Categories] {
         UserDefaults.standard.set(try? PropertyListEncoder().encode(newValue), forKey: "categories")
     }
 }
+
+var allTotalCounts: [Float] = []
 
 let players = ["Развлечения", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
 let goals = [6, 8, 26, 30, 8, 10]

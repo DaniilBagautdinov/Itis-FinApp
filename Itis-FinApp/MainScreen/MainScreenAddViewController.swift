@@ -73,6 +73,7 @@ class MainScreenAddViewController: UIViewController {
             delegate?.updateAllMoneyLabel()
             dismiss(animated:true)
             
+            totalCount(category: selectedCategory!, operation: operation)
         } else{
             warningLabel.text = "Некорректная сумма"
         }
@@ -90,6 +91,26 @@ class MainScreenAddViewController: UIViewController {
         guard let floatFromString = Float(money!) else { return false }
         
         return true
+    }
+    
+    func totalCount(category: Categories, operation: Operation) -> Void{
+        if !operation.isIncome{
+            for i in 0..<categoryDefaults.count{
+                if category.name == categoryDefaults[i].name{
+                    categoryDefaults[i].totalSumm += operation.money
+                    
+                    updateTotalCountsMassive()
+                }
+            }
+        }
+    }
+    
+    func updateTotalCountsMassive(){
+        allTotalCounts = []
+        
+        for category in categoryDefaults{
+            allTotalCounts.append(category.totalSumm)
+        }
     }
 }
 

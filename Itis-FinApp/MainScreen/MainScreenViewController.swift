@@ -28,6 +28,7 @@ class MainScreenViewController: UIViewController {
         super.viewDidLoad()
         spendingHistoryTableView.tableFooterView = UIView()
         defaults.set(0, forKey: "allMoney")
+        
         spendingHistoryTableView.dataSource = self
         spendingHistoryTableView.delegate = self
         
