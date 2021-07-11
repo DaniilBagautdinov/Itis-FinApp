@@ -32,7 +32,7 @@ class MainScreenAddViewController: UIViewController {
         super.viewDidLoad()
         categoryPickerView.delegate = self
         categoryPickerView.dataSource = self
-        selectedCategory = categories[0]
+        selectedCategory = categoryDefaults[0]
     }
 
     @IBAction func addButtonAction(_ sender: Any) {
@@ -96,17 +96,17 @@ extension MainScreenAddViewController: UIPickerViewDataSource{
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        categories.count
+        categoryDefaults.count
     }
 }
 
 extension MainScreenAddViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectedCategory = categories[row]
+        selectedCategory = categoryDefaults[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        categories[row].name
+        categoryDefaults[row].name
     }
 }
 

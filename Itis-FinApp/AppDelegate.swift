@@ -14,9 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        if !defaults.bool(forKey: "isNotFirstTime") {
+        if  !defaults.bool(forKey: "isNotFirstTime") {
             defaults.set(try? PropertyListEncoder().encode(categories), forKey: "categories")
-        } else {
             defaults.setValue(true, forKey: "isNotFirstTime")
         }
         return true

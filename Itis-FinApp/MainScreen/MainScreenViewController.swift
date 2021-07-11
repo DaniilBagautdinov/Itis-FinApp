@@ -31,8 +31,8 @@ class MainScreenViewController: UIViewController {
         spendingHistoryTableView.dataSource = self
         spendingHistoryTableView.delegate = self
         
-        let massive: [Operation] = []
-        defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
+//        let massive: [Operation] = []
+//        defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
         
         allMoneyLabel.text = "0.0"
     }

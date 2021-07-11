@@ -16,8 +16,6 @@
 		A38AF7D4269325A400DBA9D3 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38AF7D3269325A400DBA9D3 /* CategoriesViewController.swift */; };
 		A3BD455B2697B64F00AB46C5 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD455A2697B64F00AB46C5 /* ImagePickerViewController.swift */; };
 		A3BD455D2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BD455C2697B68E00AB46C5 /* ImagePickerCollectionViewCell.swift */; };
-		A5195F80269A04BC006FEB26 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5195F7D269A04B6006FEB26 /* Charts.framework */; };
-		A5195F81269A04BC006FEB26 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5195F7D269A04B6006FEB26 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5393AB82691DF5E000133B3 /* TextbookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB72691DF5E000133B3 /* TextbookViewController.swift */; };
 		A5393ABA2691E091000133B3 /* TextbookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5393AB92691E091000133B3 /* TextbookTableViewCell.swift */; };
 		A5393AC02691E4C2000133B3 /* text.txt in Resources */ = {isa = PBXBuildFile; fileRef = A5393ABF2691E4C2000133B3 /* text.txt */; };
@@ -53,20 +51,6 @@
 			remoteInfo = ChartsTests;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A3A3F7AA2699E8DC00262EA3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A5195F81269A04BC006FEB26 /* Charts.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9203B7B42690F03F004842DE /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -105,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5195F80269A04BC006FEB26 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +197,6 @@
 				A54F399A2690748A008B3476 /* Sources */,
 				A54F399B2690748A008B3476 /* Frameworks */,
 				A54F399C2690748A008B3476 /* Resources */,
-				A3A3F7AA2699E8DC00262EA3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

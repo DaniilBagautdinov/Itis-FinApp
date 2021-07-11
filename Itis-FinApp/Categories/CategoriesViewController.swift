@@ -118,3 +118,4 @@ var categoryDefaults: [Categories] {
 
 let players = ["Развлечения", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
 let goals = [6, 8, 26, 30, 8, 10]
+
