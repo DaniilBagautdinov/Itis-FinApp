@@ -16,8 +16,8 @@ class SpendingHistoryTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    func setData(expense: String, category: String){
-        categoryExpenseLabel.text = category
+    func setData(expense: String, operationName: String){
+        categoryExpenseLabel.text = operationName
         expenseLabel.text = expense
     }
 
