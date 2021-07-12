@@ -66,6 +66,11 @@ class MainScreenAddViewController: UIViewController {
             } else {
                 let massive: [Operation] = [operation]
                 defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
+                if operation.isIncome{
+                    defaults.set(defaults.float(forKey: "allMoney") + operation.money, forKey: "allMoney")
+                } else{
+                    defaults.set(defaults.float(forKey: "allMoney") - operation.money, forKey: "allMoney")
+                }
             }
             
             guard (storyboard?.instantiateViewController(identifier: "MainScreenViewController") as? MainScreenViewController) != nil else { return }

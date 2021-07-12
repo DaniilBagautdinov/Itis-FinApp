@@ -20,22 +20,16 @@ class MainScreenViewController: UIViewController {
         guard let controller = storyboard?.instantiateViewController(withIdentifier: "MainScreenAddViewController") as? MainScreenAddViewController else { return }
         controller.delegate = self
         present(controller, animated: true)
-        
-        allMoneyLabel.text = String(defaults.float(forKey: "allMoney"))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        spendingHistoryTableView.tableFooterView = UIView()
-        defaults.set(0, forKey: "allMoney")
         
+        spendingHistoryTableView.tableFooterView = UIView()
         spendingHistoryTableView.dataSource = self
         spendingHistoryTableView.delegate = self
         
-        //        let massive: [Operation] = []
-        //        defaults.set(try? PropertyListEncoder().encode(massive), forKey: "operations")
-        
-        allMoneyLabel.text = "0.0"
+        allMoneyLabel.text = defaults.float(forKey: "allMoney").description
     }
 }
 
