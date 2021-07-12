@@ -20,7 +20,7 @@ class SpendingHistoryTableViewCell: UITableViewCell {
         categoryExpenseLabel.text = operationName
         expenseLabel.text = expense
     }
-
     
-
+    
+    
 }

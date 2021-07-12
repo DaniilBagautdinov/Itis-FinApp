@@ -18,13 +18,13 @@ class ArticleViewController: UIViewController {
         
     }
     
-
+    
     override func viewWillAppear(_ animated: Bool) {
         articleTextView.isScrollEnabled = false
     }
-        
+    
     override func viewDidAppear(_ animated: Bool) {
         articleTextView.isScrollEnabled = true
     }
-
+    
 }

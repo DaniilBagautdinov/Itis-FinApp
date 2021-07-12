@@ -15,10 +15,10 @@ class ExpenseDetailTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func setData(name: String, data: String) {
         nameOfCellLabel.text = name
         dataLabel.text = data
     }
-
+    
 }

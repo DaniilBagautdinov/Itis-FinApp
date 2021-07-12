@@ -18,22 +18,22 @@ class DetailsCategoriesViewController: UIViewController {
     var operations: [Operation] = []
     
     override func viewDidLoad() {
-            super.viewDidLoad()
-            tableView.tableFooterView = UIView()
-            tableView.dataSource = self
-            tableView.delegate = self
-            navigationItem.title = categories?.name
-            setData()
-
-        }
-
-        private func setData() {
-            guard let data = defaults.value(forKey: "operations") as? Data else { return }
-            guard let allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data) else { return }
-            let operationsDictionary = Dictionary(grouping: allOperations, by: { $0.category?.name })
-            guard let categories = categories else { return }
-            operations = operationsDictionary[categories.name] ?? []
-        }
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        tableView.dataSource = self
+        tableView.delegate = self
+        navigationItem.title = categories?.name
+        setData()
+        
+    }
+    
+    private func setData() {
+        guard let data = defaults.value(forKey: "operations") as? Data else { return }
+        guard let allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data) else { return }
+        let operationsDictionary = Dictionary(grouping: allOperations, by: { $0.category?.name })
+        guard let categories = categories else { return }
+        operations = operationsDictionary[categories.name] ?? []
+    }
 }
 
 extension DetailsCategoriesViewController: UITableViewDataSource {

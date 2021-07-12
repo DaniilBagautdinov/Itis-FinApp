@@ -31,8 +31,8 @@ extension ImagePickerViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell (withReuseIdentifier: "ImagePickerCollectionViewCell", for: indexPath) as? ImagePickerCollectionViewCell else {return UICollectionViewCell()}
-            cell.setData(name: imageNames[indexPath.row])
-            return cell
+        cell.setData(name: imageNames[indexPath.row])
+        return cell
     }
     
 }

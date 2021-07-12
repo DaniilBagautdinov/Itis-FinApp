@@ -32,7 +32,7 @@ class TextbookViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"Назад", style:.plain, target:nil, action:nil)
-
+        
     }
     func readFromFile() {
         if let path = Bundle.main.path(forResource: "text", ofType: "txt") {
@@ -63,8 +63,8 @@ extension TextbookViewController: UITableViewDelegate {
 extension TextbookViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            data.count
-        }
+        data.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "TextbookTableViewCell", for: indexPath) as? TextbookTableViewCell else {return UITableViewCell()}

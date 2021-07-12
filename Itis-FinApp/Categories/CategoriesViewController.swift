@@ -10,13 +10,13 @@ import Charts
 
 
 class CategoriesViewController: UIViewController {
-
+    
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var defaults = UserDefaults.standard
     var operations: [Operation] = []
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,37 +32,37 @@ class CategoriesViewController: UIViewController {
     func customizeChart(dataPoints: [Categories], values: [Float]) {
         pieChartView.legend.enabled = false
         pieChartView.highlightPerTapEnabled = false
-      // 1. Set ChartDataEntry
-      var dataEntries: [ChartDataEntry] = []
-      for i in 0..<dataPoints.count {
-        let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i].name, data: dataPoints[i] as AnyObject)
-        dataEntries.append(dataEntry)
-      }
-      // 2. Set ChartDataSet
-      let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
-      pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
-      // 3. Set ChartData
-      let pieChartData = PieChartData(dataSet: pieChartDataSet)
-      let format = NumberFormatter()
-      format.numberStyle = .none
-      let formatter = DefaultValueFormatter(formatter: format)
-      pieChartData.setValueFormatter(formatter)
-      // 4. Assign it to the chart’s data
+        // 1. Set ChartDataEntry
+        var dataEntries: [ChartDataEntry] = []
+        for i in 0..<dataPoints.count {
+            let dataEntry = PieChartDataEntry(value: Double(values[i]), label: dataPoints[i].name, data: dataPoints[i] as AnyObject)
+            dataEntries.append(dataEntry)
+        }
+        // 2. Set ChartDataSet
+        let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: "")
+        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
+        // 3. Set ChartData
+        let pieChartData = PieChartData(dataSet: pieChartDataSet)
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        pieChartData.setValueFormatter(formatter)
+        // 4. Assign it to the chart’s data
         pieChartView.data = pieChartData
         
     }
 }
 
 private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
-  var colors: [UIColor] = []
-  for _ in 0..<numbersOfColor {
-    let red = Double(arc4random_uniform(256))
-    let green = Double(arc4random_uniform(256))
-    let blue = Double(arc4random_uniform(256))
-    let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-    colors.append(color)
-  }
-  return colors
+    var colors: [UIColor] = []
+    for _ in 0..<numbersOfColor {
+        let red = Double(arc4random_uniform(256))
+        let green = Double(arc4random_uniform(256))
+        let blue = Double(arc4random_uniform(256))
+        let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
+        colors.append(color)
+    }
+    return colors
 }
 
 extension CategoriesViewController: UICollectionViewDataSource {

@@ -34,7 +34,7 @@ class MainScreenAddViewController: UIViewController {
         categoryPickerView.dataSource = self
         selectedCategory = categoryDefaults[0]
     }
-
+    
     @IBAction func addButtonAction(_ sender: Any) {
         print(isMoneyValid(money: moneyTextFiled.text))
         if isMoneyValid(money: moneyTextFiled.text){

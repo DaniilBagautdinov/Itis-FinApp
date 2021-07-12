@@ -22,7 +22,7 @@ class AddCategoryViewController: UIViewController {
     var category: Categories?
     weak var delegate: AddCategoryViewControllerDelegate?
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,7 +36,7 @@ class AddCategoryViewController: UIViewController {
         categoryDefaults.append(Categories(name: name, image: pickedImage ?? "burger", totalSumm: 0))
         
         allTotalCounts.append(0)
-    
+        
         delegate?.updateCategoriesView()
         dismiss(animated: true)
     }
