@@ -52,11 +52,16 @@ extension MainScreenViewController: UITableViewDataSource {
         if let data = defaults.value(forKey: "operations") as? Data {
             let allOperations = try? PropertyListDecoder().decode(Array<Operation>.self, from: data)
             if let isIncome = allOperations?[indexPath.row].isIncome {
+                var name = allOperations?[indexPath.row].name
+                if name == ""{
+                    name = allOperations?[indexPath.row].category?.name
+                }
+                
                 if isIncome {
-                    cell.setData(expense: "+\(allOperations?[indexPath.row].money ?? 0)", operationName: allOperations?[indexPath.row].name ?? "???")
+                    cell.setData(expense: "+\(allOperations?[indexPath.row].money ?? 0)", operationName: name ?? "???")
                     cell.expenseLabel.textColor = UIColor.systemGreen
                 } else {
-                    cell.setData(expense: "-\(allOperations?[indexPath.row].money ?? 0)", operationName: allOperations?[indexPath.row].name ?? "???")
+                    cell.setData(expense: "-\(allOperations?[indexPath.row].money ?? 0)", operationName: name ?? "???")
                     cell.expenseLabel.textColor = UIColor.systemRed
                 }
             }
