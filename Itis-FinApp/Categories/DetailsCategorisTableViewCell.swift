@@ -19,8 +19,14 @@ class DetailsCategorisTableViewCell: UITableViewCell {
     }
     
     func setData (operation: Operation) {
+        if operation.isIncome {
+            money.textColor = .systemGreen
+            money.text = "+\(operation.money)"
+        } else {
+            money.textColor = .systemRed
+            money.text = "-\(operation.money)"
+        }
         name.text = operation.name
         time.text = operation.date
-        money.text = "\(operation.money)"
     }
 }
