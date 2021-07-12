@@ -21,4 +21,4 @@ var categories: [Categories] = [
     Categories(name: "Кафе", image: "coffee-cup", totalSumm: 0)
 ]
 
-var imageNames: [String] = ["burger","hospital","shopping-cart","beer-bottle","van","mortarboard","football-ball","kurta","kite","coffee-cup"]
+var imageNames: [String] = ["burger","hospital","shopping-cart","beer-bottle","van","mortarboard","football-ball","kurta","kite","coffee-cup","hookah","flask","model","family-car","sunglasses","clock","vaccine","tooth","mediator","pub","store","guitar","pawprint","hairdryer","rain","cinnamon-roll","cooking","flight","coffin","museum","eye-mask"]
