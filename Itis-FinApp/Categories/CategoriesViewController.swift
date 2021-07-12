@@ -27,7 +27,8 @@ class CategoriesViewController: UIViewController {
     }
     
     func customizeChart(dataPoints: [Categories], values: [Float]) {
-
+        pieChartView.legend.enabled = false
+        pieChartView.highlightPerTapEnabled = false
       // 1. Set ChartDataEntry
       var dataEntries: [ChartDataEntry] = []
       for i in 0..<dataPoints.count {
@@ -45,6 +46,7 @@ class CategoriesViewController: UIViewController {
       pieChartData.setValueFormatter(formatter)
       // 4. Assign it to the chart’s data
         pieChartView.data = pieChartData
+        
     }
 }
 
@@ -131,7 +133,4 @@ var allTotalCounts: [Float] {
     }
 }
 
-
-let players = ["Развлечения", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
-let goals = [6, 8, 26, 30, 8, 10]
 
