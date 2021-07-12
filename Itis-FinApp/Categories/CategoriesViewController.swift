@@ -22,8 +22,11 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        customizeChart(dataPoints: categoryDefaults, values: allTotalCounts.map{ Float($0) })
+    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        customizeChart(dataPoints: categoryDefaults, values: allTotalCounts.map{ Float($0) })
     }
     
     func customizeChart(dataPoints: [Categories], values: [Float]) {
